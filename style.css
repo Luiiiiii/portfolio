@@ -350,27 +350,26 @@ section .home-logo{
 }
 .container-contact>.contacts{
   height: 50vh;
+  width: auto;
   margin: 5px;
   background-color: #302c2c6b;
   border: 1px rgb(255, 115, 0) solid;
   border-radius: 20px;
 }
-@media screen and (max-width:576px) {
-  .container-contact{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 .contact-head{
   text-align: center;
-  padding-top: 50px;
-  font-size: 4rem;
+  padding-top: 6vh;
+  font-size: 4vw;
   color: rgb(255, 115, 0);
 }
 .contact-body{
-  padding: 30px;
+  padding: 4vh 4vw;
   color: white;
+  font-size: 3vw;
+}
+.contact-body h1{
+  font-size: 3vw;
 }
 .contact-main{
   color: white;
