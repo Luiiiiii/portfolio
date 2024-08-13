@@ -8,35 +8,36 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon.png" type="image/icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="src/img/icon.png" type="image/icon">
     <title>Portfolio</title>
 </head>
-<body>
-    <header class="text-center"> 
-            Portfolio
-    </header>
-    <nav class="navbar navbar-expand-sm" id="navbar">
-        <div class="col-lg-6 title">
-            <img src="logo.png" alt="img">
+<body data-spy="scroll" data-target=".navbar" data-offset="250" id="body">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <img class="logo" src="./src/img/logo.png" alt="">
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item align-content-center">
+              <a class="nav-link" href="#Home">Home</a>
+            </li>
+            <li class="nav-item align-content-center">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item align-content-center">
+              <a class="nav-link" href="#Skills">Skills/Projects</a>
+            </li>
+            <li class="nav-item align-content-center">
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+              <li class="nav-item align-content-center">
+                <a class="switch nav-link" onclick="bg()" data-toggle="tooltip" title="Dark Mode">Light Mode</a>
+              </li>
+          </ul>
         </div>
-        <div class="col-lg-6 btn-title">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#Home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#About">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Skills">Skills</a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#Contact">Contact</a>
-                </li>
-              </ul>
-        </div>
-    </nav>
+      </nav>
     <section class="container-fluid" id="Home">
             <div class="container col-lg-6 home-text">
                 <div class="text-left">
@@ -45,7 +46,7 @@
                 </h2>
                 <br>
                 <h1 class="text-alert">
-                    <b>I'm Luigi Miguel</b>
+                    <b>I'm Luigi Miguel Amat</b>
                 </h1>
                 <h2 class="text-alert">
                     Information Technology Graduate
@@ -71,7 +72,7 @@
                         <div class="control maximize"></div>
                       </div>
                     </div>
-                   <a class="text" href="LAMAT Resume - Main.docx" download>Download Resume</a>
+                   <a class="text" href="src/files/LAMAT Jobstreet Resume - Main.docx" download>Download Resume</a>
                   </div>
                   
             </div>
@@ -81,85 +82,123 @@
             <b><h1 class="about-title text-center">ABOUT ME</h1></b>
             <br>
             <div class="container-about">
-            <div class="col-lg-5 text-center">
+                <div class="row">
+            <div class="col-sm-6 text-sm-center">
                 <h2>
-                    Hello! I am Luigi Miguel, I'd love to explore new ideas and coding makes me excited, especially
+                    Hello! I am Luigi Miguel Amat, I'd love to explore new ideas and coding makes me excited, especially
                     when creating websites.
-                </h2>
+                </h2><br>
             </div>
-            <div class="col-lg-8 text-center">
+            <div class="col-sm-6 text-sm-center">
+                <h2>I live in Dolores, Quezon.</h2>
                 <h2>Graduated at San Pablo Colleges, San Pablo City, Laguna.</h2>
             </div>
+        </div>
         </div>
     </div>
     </section>
     <section class="container-fluid" id="Skills">
-        <h1 class="text-center">S K I L L S</h1>
-        <h1 class="text-md-left">Basic knowledge:</h1>
-        <div class="container-skills">
-        <div class="col-md-6 text-center skills-desc">
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-        <div class="col-md-6 text-center skills-desc">
-            <ul>
-                <li>Python</li>
-                <li>PHP</li>
-                <li>MySQL</li>
-            </ul>
-        </div>
-    </div>
+            <div class="row">
+                <div class="container col-sm-6">
+                    <h2 class="text-lg-center jumbotron jumbotron-fluid">Recent Projects</h2>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    
+                      <ul class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ul>
+                      
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="/src/img/img1.png" alt="Coffee Website" width="1300" height="700">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/src/img/img2.png" alt="e-Submit Educational Assistance" width="1300" height="700">
+                        </div>
+                      </div>
+                      
+                      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                      </a>
+                      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                      </a>
+                    </div>
+                    <br>
+                    </div>
+                    <div class="container col-sm-6">
+                        <h2 class="text-lg-center jumbotron jumbotron-fluid">Skills</h2>
+                        <ul class="text-center">
+                            <li>Web Development</li>
+                            <li>Web Design</li>
+                            <li>Responsive Design</li>
+                            <li>Programming</li>
+                            <li>Project Management</li>
+                            <li>Project Coordination</li>
+                            <li>Project Planning</li>
+                            <li>Adaptabilty</li>
+                            <li>Teamwork</li>
+                            <li>Problem Solving</li>
+                            <li>Organizational Skills</li>
+                        </ul>
+             </div>
+            </div>
     </section>
     <section class="container-fluid" id="Contact">
-        <h1>Contact</h1>
-        <div class="container-contact">
-            <div class="col-lg-4 contacts number">
-                <div class="contact-head">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="contact-body text-center">
-                    <h1 class="text-capitalize">Phone Number</h1>
-                </div>
-                <div class="contact-main text-center">
-                    <h2>
-                        +69 991-482-3153
-                    </h2>
-                </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header jumbotron jumbotron-fluid text-md-center">
+                        <h1>Facebook</h1>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2>
+                            <a class="text-info" href="https://www.facebook.com/Luigiamat6">Luigi Miguel Amat</a>
+                        </h2>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                  </div>
             </div>
-            <div class="col-lg-4 contacts email">
-                <div class="contact-head">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="contact-body text-center">
-                    <h1 class="text-capitalize">Email</h1>
-                </div>
-                <div class="contact-main text-center">
-                    <h2>
-                        amatluigimiguel@gmail.com
-                    </h2>
-                </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header jumbotron jumbotron-fluid text-md-center">
+                        <h1>
+                            Email
+                        </h1>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2 class="text-info">
+                            amatluigimiguel@gmail.com
+                        </h2>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                  </div>
             </div>
-            <div class="col-lg-4 contacts facebook">
-                <div class="contact-head">
-                    <i class="fa-brands fa-facebook"></i>
-                </div>
-                <div class="contact-body text-center">
-                    <h1 class="text-capitalize">Facebook</h1>
-                </div>
-                <div class="contact-main text-center">
-                    <h2>
-                        <a href="https://www.facebook.com/Luigiamat6">Luigi Miguel</a>
-                    </h2>
-                </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header jumbotron jumbotron-fluid text-md-center">
+                        <h1>
+                            Contact Number
+                        </h1>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2 class="text-info">
+                            +63 991 482 3153
+                        </h2>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                  </div>
             </div>
-        </div>
+        </div>    
     </section>
-    <footer>
-        <h1>@Lui</h1>
+    <footer class="text-center alert-heading">
+        <h3 class="bg-light">
+            <marquee behavior="scroll" direction="right">
+                Luigi Miguel Amat
+            </marquee>
+        </h3>
     </footer>
-    <script src="index.js"></script>
+    <script src="script/index.js"></script>
 </body>
 </html>
