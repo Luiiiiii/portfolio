@@ -1,16 +1,3 @@
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
 function myBtn() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
@@ -20,4 +7,18 @@ function myBtn() {
     }
   }
 
+function bg(){
+  let body = document.getElementById("body");
+  if(body.style.background === "black"){
+     body.style.background = "white";
+  } else {
+      body.style.background = "black";
+  }
+  let button = document.querySelector(".switch");
+   if(button.innerHTML === "Light Mode"){
+      button.innerHTML = "Dark Mode";
+  } else {
+       button.innerHTML = "Light Mode";
+   }
+}
   
